@@ -10,6 +10,7 @@
     --primary-button-color: #188CE8;
     --border-color: #ECECEC;
     --card-border:#EEEEEE;
+    --icon-color:#AFB1B8;
 }
 
 /* reset */
@@ -123,11 +124,16 @@ a {
     padding-bottom: 32px;
 }
 
+
 .contact .link:hover,
 .contact .link:focus {
     color: var(--accent-color);
 }
 
+.contact .link:hover .nav-icon,
+.contact .link:focus {
+    fill: var(--accent-color);
+}
 .contact.list.link {
     display: flex;
     margin-left: auto;
@@ -137,10 +143,17 @@ a {
     margin-right: 50px;
 }
 
+.nav-icon{
+    margin-right: 10px;
+    color: var(--primary-text-color);
+}
+
 /* Hero */
 .hero {
+    background-image:linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), url(../images/bckg.jpg);
     background-color: var(--block-color);
-    width: 1600px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     margin: 0 auto;
@@ -175,6 +188,16 @@ a {
 .list.feature {
     display: flex;
     gap: 30px;
+}
+
+.card-icon {
+    background-color: var(--team-color);
+    padding: 25px 100px;
+    margin-bottom: 30px;
+}
+
+.feature-icon {
+    display: block;
 }
 
 .feature-title {
@@ -264,12 +287,89 @@ a {
     text-align: center;
 }
 
+.social-icon {
+    fill:var(--icon-color);
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    gap:22px;
+}
+
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background-color: var(--main-white-color);
+}
+
+.social-link:hover{
+    background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon {
+    fill: var(--main-white-color);
+}
+
+/* Partners */
+.section-partners {
+    display: flex;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.partners-list {
+    display: flex;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.partners-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+}
+
+.partner-link {
+    padding: 16px 32px;
+}
+
+.partner-icon {
+    fill:var(--icon-color);
+}
+
+.partners-item:hover,
+.partner-item:focus {
+    border-color: var(--accent-color);
+}
+
+.partners-item:hover .partner-icon,
+.partner-item:focus .partner-icon{
+    fill: var(--accent-color);
+}
+
 /* Footer */
 .page-footer {
     background-color: var(--block-color);
     padding-top: 60px;
     padding-bottom: 60px;
     margin: 0 auto;
+}
+
+.footer-wrapper {
+    display: flex;
 }
 
 .page-footer .logo {
@@ -308,14 +408,44 @@ a {
     font-style: normal;
 }
 
-.page-footer li {
+.page-footer li:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.page-footer li:last-child {
-    margin-bottom: 0;
+.page-footer .social {
+    display: flex;
+    flex-direction: column;
+    width: 206px;
+    margin-left: 70px;
+}
+.social>.title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1,15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-white-color);
+}
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px;
+    gap: 10px;
+    margin-top: 20px;
+}
+.page-footer .social-icon {
+    fill: var(--main-white-color);
 }
 
+.page-footer .social-link {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.page-footer .social-link:hover,
+.page-footer .social-link:focus {
+    background: var(--accent-color);
+}
 /* Buttons */
 .button {
     border: none;
@@ -395,6 +525,13 @@ a {
     width: 370px;
 }
 
+.card:hover,
+.card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .example {
     color: var(--heading-text-color);
     font-weight: 700;
@@ -415,6 +552,10 @@ a {
     border-left: 1px solid var(--card-border);
     border-bottom: 1px solid var(--card-border);
 }
+
+
+
+
 
 
 
