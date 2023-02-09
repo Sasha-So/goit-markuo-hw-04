@@ -99,10 +99,6 @@ a {
     padding-top: 32px;
     padding-bottom: 32px;
 }
-/* 
-.site-nav .link:last-child {
-    margin-right: 0;
-} */
 
 .site-nav .link.current {
     color: var(--accent-color);
@@ -124,7 +120,10 @@ a {
     padding-bottom: 32px;
 }
 
-
+.contact.list .link {
+    display: flex;
+    align-items: center;
+}
 .contact .link:hover,
 .contact .link:focus {
     color: var(--accent-color);
@@ -145,7 +144,7 @@ a {
 
 .nav-icon{
     margin-right: 10px;
-    color: var(--primary-text-color);
+    fill: var(--primary-text-color);
 }
 
 /* Hero */
@@ -192,8 +191,11 @@ a {
 
 .card-icon {
     background-color: var(--team-color);
-    padding: 25px 100px;
     margin-bottom: 30px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-icon {
@@ -293,7 +295,7 @@ a {
 
 .socials{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
     padding: 12px;
     gap:22px;
@@ -311,7 +313,8 @@ a {
     background-color: var(--main-white-color);
 }
 
-.social-link:hover{
+.social-link:hover,
+.social-link:focus{
     background-color: var(--accent-color);
 }
 
@@ -332,7 +335,7 @@ a {
     gap: 30px;
 }
 
-.partners-item{
+.partners-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,16 +350,16 @@ a {
 }
 
 .partner-icon {
-    fill:var(--icon-color);
+    fill: var(--icon-color);
 }
 
 .partners-item:hover,
-.partner-item:focus {
+.partners-item:focus {
     border-color: var(--accent-color);
 }
 
 .partners-item:hover .partner-icon,
-.partner-item:focus .partner-icon{
+.partners-item:focus .partner-icon {
     fill: var(--accent-color);
 }
 
@@ -370,6 +373,7 @@ a {
 
 .footer-wrapper {
     display: flex;
+    align-items: baseline;
 }
 
 .page-footer .logo {
@@ -412,13 +416,13 @@ a {
     margin-bottom: 9px;
 }
 
-.page-footer .social {
+.social-wrapper {
     display: flex;
     flex-direction: column;
     width: 206px;
     margin-left: 70px;
 }
-.social>.title {
+.social-wrapper>.title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1,15;
@@ -430,7 +434,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 12px;
+
     gap: 10px;
     margin-top: 20px;
 }
@@ -440,6 +444,8 @@ a {
 
 .page-footer .social-link {
     background: rgba(255, 255, 255, 0.1);
+    /* display: flex;
+    align-items: center; */
 }
 
 .page-footer .social-link:hover,
@@ -552,6 +558,10 @@ a {
     border-left: 1px solid var(--card-border);
     border-bottom: 1px solid var(--card-border);
 }
+
+
+
+
 
 
 
